@@ -4,7 +4,7 @@ x=int(input())
 mlist=[[0 for _ in range (n)] for _ in range (n)]
 
 dx=[0,1,0,-1] #상우하좌
-dy=[1,-0,-1,0]
+dy=[-1,-0,1,0]
 
 a=n//2
 b=n//2
