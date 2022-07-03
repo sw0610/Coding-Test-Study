@@ -1,6 +1,12 @@
 n=int(input())
-d=[0,1,2]
+s=input()
 
-for i in range(3, n+1):
-    d.append(d[i-1]+d[i-2])
-print(d[n]%10007)
+cnt={'B':0, 'R':0}
+
+cnt[s[0]]+=1
+
+for i in range(1, len(s)):
+    if s[i]!=s[i-1]:
+        cnt[s[i]]+=1
+
+print(min(cnt['B'], cnt['R'])+1)
